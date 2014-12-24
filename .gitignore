@@ -1,3 +1,6 @@
 .idea
 ext
 /vendor/
+.temp/
+compile.log
+compile-errors.log

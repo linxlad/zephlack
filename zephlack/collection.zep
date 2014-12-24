@@ -1,4 +1,4 @@
-namespace Nirlah;
+namespace Zephlack;
 
 class Collection implements \ArrayAccess, \Countable, \IteratorAggregate {
 	

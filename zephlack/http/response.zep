@@ -1,4 +1,4 @@
-namespace Nirlah\Http;
+namespace Zephlack\Http;
 
 class Response {
 	
