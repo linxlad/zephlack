@@ -5,21 +5,21 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 	public function testInstantiatable()
 	{
 		// Array:
-		$firstCollection = new Nirlah\Collection(["foo","bar","baz"]);
+		$firstCollection = new Zephlack\Collection(["foo","bar","baz"]);
 		$this->assertCount(3, $firstCollection);
 
 		// Collection:
-		$secondCollection = new Nirlah\Collection($firstCollection);
+		$secondCollection = new Zephlack\Collection($firstCollection);
 		$this->assertCount(3, $firstCollection);
 
 		// Not array or Collection:
 		$this->setExpectedException('Exception');
-		$thirdCollection = new Nirlah\Collection("sdfsdf");
+		$thirdCollection = new Zephlack\Collection("sdfsdf");
 	}
 
 	public function testOOProperties()
 	{
-		$collection = new Nirlah\Collection;
+		$collection = new Zephlack\Collection;
 		$collection->foo = "bar";
 		$this->assertEquals("bar", $collection->foo);
 		$this->assertTrue(isset($collection->foo));
@@ -29,7 +29,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 
 	public function testArray()
 	{
-		$collection = new Nirlah\Collection;
+		$collection = new Zephlack\Collection;
 		$collection['foo'] = "bar";
 		$this->assertEquals("bar", $collection['foo']);
 		$this->assertTrue(isset($collection['foo']));
@@ -39,7 +39,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 
 	public function testOOMethod()
 	{
-		$collection = new Nirlah\Collection;
+		$collection = new Zephlack\Collection;
 		$collection->set('foo', "bar");
 		$this->assertEquals("bar", $collection->get('foo'));
 		$this->assertTrue($collection->has('foo'));
@@ -52,7 +52,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testIteratable()
 	{
-		$collection = new Nirlah\Collection(["foo","bar","baz"=>"acme"]);
+		$collection = new Zephlack\Collection(["foo","bar","baz"=>"acme"]);
 		$i = 0;
 		foreach ($collection as $key => $value) {
 			switch ($i) {
@@ -76,7 +76,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testAllMethod()
 	{
-		$collection = new Nirlah\Collection(["foo","bar","baz"=>"acme"]);
+		$collection = new Zephlack\Collection(["foo","bar","baz"=>"acme"]);
 		$this->assertEquals(["foo","bar","baz"=>"acme"], $collection->all());
 	}
 
@@ -86,7 +86,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testOrderedAdding()
 	{
-		$collection = new Nirlah\Collection(["middle"]);
+		$collection = new Zephlack\Collection(["middle"]);
 		$collection->add("last");
 		$collection->insert("first");
 		$this->assertEquals(["first","middle","last"], $collection->all());
@@ -99,7 +99,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 	public function testMergingArray()
 	{
 		// Add items:
-		$collection = new Nirlah\Collection(['foo'=>'bar']);
+		$collection = new Zephlack\Collection(['foo'=>'bar']);
 		$collection->merge(['baz'=>'acme']);
 		$this->assertEquals(['foo'=>'bar','baz'=>'acme'], $collection->all());
 
@@ -115,13 +115,13 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 	public function testMergingCollection()
 	{
 		// Add items:
-		$firstCollection = new Nirlah\Collection(['foo'=>'bar']);
-		$secondCollection = new Nirlah\Collection(['baz'=>'acme']);
+		$firstCollection = new Zephlack\Collection(['foo'=>'bar']);
+		$secondCollection = new Zephlack\Collection(['baz'=>'acme']);
 		$firstCollection->merge($secondCollection);
 		$this->assertEquals(['foo'=>'bar','baz'=>'acme'], $firstCollection->all());
 
 		// Overwrite items:
-		$thirdCollection = new Nirlah\Collection(['foo'=>'bang']);
+		$thirdCollection = new Zephlack\Collection(['foo'=>'bang']);
 		$firstCollection->merge($thirdCollection);
 		$this->assertEquals(['foo'=>'bang','baz'=>'acme'], $firstCollection->all());
 	}
@@ -132,7 +132,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testGet()
 	{
-		$collection = new Nirlah\Collection(["foo","bar","baz","acme","bang"]);
+		$collection = new Zephlack\Collection(["foo","bar","baz","acme","bang"]);
 		$this->assertEquals("foo", $collection->first());
 		$this->assertEquals("bang", $collection->last());
 		$this->assertContains($collection->random(), $collection->all());
@@ -145,7 +145,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testPull()
 	{
-		$collection = new Nirlah\Collection(["foo","bar","key"=>"baz","acme","bang"]);
+		$collection = new Zephlack\Collection(["foo","bar","key"=>"baz","acme","bang"]);
 
 		// Key:
 		$this->assertEquals("baz", $collection->pull("key"));
@@ -170,7 +170,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testContains()
 	{
-		$collection = new Nirlah\Collection(["foo"]);
+		$collection = new Zephlack\Collection(["foo"]);
 		$this->assertTrue($collection->contains("foo"));
 		$this->assertFalse($collection->contains("bar"));
 	}
@@ -180,10 +180,10 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testEmpty()
 	{
-		$firstCollection = new Nirlah\Collection;
+		$firstCollection = new Zephlack\Collection;
 		$this->assertTrue($firstCollection->isEmpty());
 
-		$secondCollection = new Nirlah\Collection(["foo"]);
+		$secondCollection = new Zephlack\Collection(["foo"]);
 		$this->assertFalse($secondCollection->isEmpty());
 	}
 
@@ -193,11 +193,11 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testCount()
 	{
-		$firstCollection = new Nirlah\Collection(["foo","bar","baz"]);
+		$firstCollection = new Zephlack\Collection(["foo","bar","baz"]);
 		$this->assertEquals(3, $firstCollection->count());
 		$this->assertCount(3, $firstCollection->all());
 
-		$secondCollection = new Nirlah\Collection;
+		$secondCollection = new Zephlack\Collection;
 		$this->assertEquals(0, $secondCollection->count());
 		$this->assertCount(0, $secondCollection->all());
 	}
@@ -207,7 +207,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testKeys()
 	{
-		$collection = new Nirlah\Collection(["foo","bar","baz"=>"acme"]);
+		$collection = new Zephlack\Collection(["foo","bar","baz"=>"acme"]);
 		$this->assertEquals([0, 1, "baz"], $collection->keys());
 	}
 
@@ -221,7 +221,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 			['name'=>'b', 'age'=>6],
 			['name'=>'c', 'age'=>2],
 		];
-		$collection = new Nirlah\Collection($array2d);
+		$collection = new Zephlack\Collection($array2d);
 		$this->assertEquals(["a","b","c"], $collection->lists('name'));
 		$this->assertEquals([2=>"c",4=>"a",6=>"b"], $collection->lists('name', 'age'));
 	}
@@ -232,7 +232,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 	public function testImplode()
 	{
 		// 1D: - No, not the "band"...
-		$firstCollection = new Nirlah\Collection(["foo","bar","baz"]);
+		$firstCollection = new Zephlack\Collection(["foo","bar","baz"]);
 		$this->assertEquals("foo, bar, baz", $firstCollection->implode(', '));
 
 		// 2D:
@@ -241,7 +241,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 			['name'=>'bar', 'age'=>2],
 			['name'=>'baz', 'age'=>6],
 		];
-		$secondCollection = new Nirlah\Collection($array2d);
+		$secondCollection = new Zephlack\Collection($array2d);
 		$this->assertEquals("foo, bar, baz", $secondCollection->implodeBy('name', ', '));
 		$this->assertEquals("bar, foo, baz", $secondCollection->implodeBy('name', ', ', 'age'));
 	}
@@ -253,7 +253,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 	public function testOrdering()
 	{
 		// Reverse:
-		$collection = new Nirlah\Collection(["foo","bar","baz"]);
+		$collection = new Zephlack\Collection(["foo","bar","baz"]);
 		$this->assertEquals("baz,bar,foo", $collection->inverse()->implode(','));
 		$this->assertEquals("baz,bar,foo", $collection->implode(','));
 
@@ -272,7 +272,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testWalk()
 	{
-		$collection = new Nirlah\Collection(["foo","bar","baz"]);
+		$collection = new Zephlack\Collection(["foo","bar","baz"]);
 		$func = function(&$value){
 			$value .= "Walk";
 		};
@@ -285,7 +285,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testMap()
 	{
-		$collection = new Nirlah\Collection(["foo","bar","baz"]);
+		$collection = new Zephlack\Collection(["foo","bar","baz"]);
 		$func = function($value){
 			return $value . "Map";
 		};
@@ -298,7 +298,7 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testFilter()
 	{
-		$collection = new Nirlah\Collection(["yes","true","good","no","false","bad"]);
+		$collection = new Zephlack\Collection(["yes","true","good","no","false","bad"]);
 		$func = function($value){
 			return in_array($value, ["yes","true","good"]);
 		};

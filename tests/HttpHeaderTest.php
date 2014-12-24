@@ -8,7 +8,7 @@ class HttpHeaderTest extends PHPUnit_Framework_TestCase {
 
 	public function testParseStatus()
 	{
-		$header = new Nirlah\Http\Header;
+		$header = new Zephlack\Http\Header;
 		$header->parse($this->statusOK);
 		$this->assertEquals(1.1, $header->version);
 		$this->assertEquals(200, $header->statusCode);
@@ -18,7 +18,7 @@ class HttpHeaderTest extends PHPUnit_Framework_TestCase {
 
 	public function testParseFields()
 	{
-		$header = new Nirlah\Http\Header;
+		$header = new Zephlack\Http\Header;
 		$header->parse($this->fields);
 		$this->assertEquals("bar", $header->foo);
 		$this->assertEquals("acme", $header->baz);
@@ -26,8 +26,8 @@ class HttpHeaderTest extends PHPUnit_Framework_TestCase {
 
 	public function testUndefinedField()
 	{
-		$header = new Nirlah\Http\Header;
-		$this->setExpectedException('Nirlah\Http\HttpException');
+		$header = new Zephlack\Http\Header;
+		$this->setExpectedException('Zephlack\Http\HttpException');
 		$header->foo;
 	}
 
@@ -38,7 +38,7 @@ class HttpHeaderTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testParse()
 	{
-		$header = new Nirlah\Http\Header($this->statusOK."\r\n".$this->fields);
+		$header = new Zephlack\Http\Header($this->statusOK."\r\n".$this->fields);
 		$this->assertEquals(1.1, $header->version);
 		$this->assertEquals(200, $header->statusCode);
 		$this->assertEquals("OK", $header->statusMessage);
@@ -54,7 +54,7 @@ class HttpHeaderTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testParseArray()
 	{
-		$header = new Nirlah\Http\Header([$this->statusOK, "foo: bar", "baz: acme"]);
+		$header = new Zephlack\Http\Header([$this->statusOK, "foo: bar", "baz: acme"]);
 		$this->assertEquals(1.1, $header->version);
 		$this->assertEquals(200, $header->statusCode);
 		$this->assertEquals("OK", $header->statusMessage);
@@ -65,8 +65,8 @@ class HttpHeaderTest extends PHPUnit_Framework_TestCase {
 
 	public function testUnsupportedParse()
 	{
-		$this->setExpectedException('Nirlah\Http\HttpException');
-		$header = new Nirlah\Http\Header(123);
+		$this->setExpectedException('Zephlack\Http\HttpException');
+		$header = new Zephlack\Http\Header(123);
 	}
 
 	/**
@@ -74,8 +74,8 @@ class HttpHeaderTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testHttpError()
 	{
-		$this->setExpectedException('Nirlah\Http\HttpException');
-		new Nirlah\Http\Header($this->statusError);
+		$this->setExpectedException('Zephlack\Http\HttpException');
+		new Zephlack\Http\Header($this->statusError);
 	}
 
 	/**
@@ -83,7 +83,7 @@ class HttpHeaderTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testCount()
 	{
-		$header = new Nirlah\Http\Header($this->fields);
+		$header = new Zephlack\Http\Header($this->fields);
 		$this->assertCount(2, $header);
 	}
 
@@ -92,7 +92,7 @@ class HttpHeaderTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testFieldsAccess()
 	{
-		$header = new Nirlah\Http\Header;
+		$header = new Zephlack\Http\Header;
 		$this->assertFalse(isset($header->foo));
 		$header->foo = "bar";
 		$this->assertTrue(isset($header->foo));
@@ -105,7 +105,7 @@ class HttpHeaderTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testBuild()
 	{
-		$header = new Nirlah\Http\Header;
+		$header = new Zephlack\Http\Header;
 		$header->version = 1.1;
 		$header->statusCode = 200;
 		$header->statusMessage = "OK";
