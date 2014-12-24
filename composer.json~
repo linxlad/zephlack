@@ -1,0 +1,14 @@
+{
+    "name": "nirlah/toolbelt",
+    "description": "My utilities library PHP extension written in Zephir.",
+    "authors": [
+        {
+            "name": "Nir Lahad",
+            "email": "nirlah@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "4.3.*"
+    }
+}

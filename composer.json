@@ -1,0 +1,14 @@
+{
+    "name": "linxlad/zephlack",
+    "description": "SLack API extension written in Zephir.",
+    "authors": [
+        {
+            "name": "Nathan Daly",
+            "email": "justlikephp@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "4.3.*"
+    }
+}
