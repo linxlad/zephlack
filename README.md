@@ -84,3 +84,7 @@ If your message contain @username and you want him to be notified, add `$message
 **Polem** for the leg work on slack-notifier which this is based. Great PHP slack messaging package which can be found here [slack-notifier](https://github.com/polem/slack-notifier).
 
 **Nirlah** for the http utility that saved me hours of work. Again a great Zephir based package which can be found here [Toolbelt](https://github.com/Nirlah/Toolbelt).
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/linxlad/zephlack/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
