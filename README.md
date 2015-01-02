@@ -3,6 +3,8 @@ zephlack
 
 Slack Messaging extension written in Zephir.
 
+![Slack output](http://i58.tinypic.com/az6q7o.png)
+
 ## Installation
 ##### Pre-built extension
 Grab the latest extension from [here](https://sourceforge.net/projects/zephlack/files/zephlack.so) and place it in the following directory:
