@@ -75,6 +75,10 @@ class Client extends Http\Request
 
         let response = this->post();
 
+        if this->debug === true {
+            return ["payload":data, "response":response];
+        }
+
         let valid = this->isOK(response);
 
         return valid;
