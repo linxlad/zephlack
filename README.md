@@ -1,7 +1,7 @@
 zephlack
 ========
 
-Slack API extension written in Zephir.
+Slack Messaging extension written in Zephir.
 
 ## Installation
 ##### Pre-built extension
