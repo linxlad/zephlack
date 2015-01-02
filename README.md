@@ -12,9 +12,13 @@ Grab the latest extension from here and place it in the following directory:
 ######CentOS
 `/usr/lib64/php/modules/zephlack.so`
 
+Add extension to your php configuration:
+    
+    extension=zephlack.so
+
 #####Self build extension
 
-_(Zephir installation required for this option. Instructions can be found here [here](http://zephir-lang.com/install.html#installing-zephir))_
+_(Zephir installation required for this option. Instructions can be found [here](https://sourceforge.net/projects/zephlack/files/zephlack.so) [here](http://zephir-lang.com/install.html#installing-zephir))_
 
     git clone --depth=1 --branch=master git://github.com/linxlad/zephlack.git linxlad/zephlack
     cd zephlack
