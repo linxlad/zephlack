@@ -5,6 +5,8 @@ Slack Messaging extension written in Zephir.
 
 ![Slack output](http://i58.tinypic.com/az6q7o.png)
 
+Slack is a platform for team communication: everything in one place, instantly searchable, available wherever you go. You can find out more about Slack [here](https://slack.com/)
+
 ## Installation
 ##### Pre-built extension
 Grab the latest extension from [here](https://sourceforge.net/projects/zephlack/files/zephlack.so) and place it in the following directory:
