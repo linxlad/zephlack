@@ -5,7 +5,7 @@ Slack API extension written in Zephir.
 
 ## Installation
 ##### Pre-built extension
-Grab the latest extension from here and place it in the following directory:
+Grab the latest extension from [here](https://sourceforge.net/projects/zephlack/files/zephlack.so) and place it in the following directory:
 ######Ubuntu
 `/usr/lib/php5/20.../zephlack.so`
 
@@ -18,7 +18,7 @@ Add extension to your php configuration:
 
 #####Self build extension
 
-_(Zephir installation required for this option. Instructions can be found [here](https://sourceforge.net/projects/zephlack/files/zephlack.so) [here](http://zephir-lang.com/install.html#installing-zephir))_
+_(Zephir installation required for this option. Instructions can be found [here](http://zephir-lang.com/install.html#installing-zephir))_
 
     git clone --depth=1 --branch=master git://github.com/linxlad/zephlack.git linxlad/zephlack
     cd zephlack
