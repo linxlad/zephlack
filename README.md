@@ -1,4 +1,4 @@
 zephlack
 ========
 
-SLack API extension written in Zephir.
+Slack API extension written in Zephir.

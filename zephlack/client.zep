@@ -1,14 +1,44 @@
 namespace Zephlack;
 
-use Zephlack\Http\Request;
 
-class Client
+class Client extends Http\Request
 {
-    protected request;
 
-    public static function say()
+    protected url = "";
+    protected token = "";
+
+    public function __construct(team = null, token = null)
     {
-        let this->request = new Request();
+        if empty team {
+            throw new clientException("Team name is required.");
+        }
+
+        if empty token {
+            throw new clientException("API token name is required.");
+        }
+
+        let this->url = "https://" . team . ".slack.com";
+        let this->token = token;
+        parent::__construct(this->url);
+        this->setParams(["token" : token]);
     }
 
+    public function getUrl()
+    {
+        return this->url;
+    }
+
+    public function getToken()
+    {
+        return this->token;
+    }
+
+    public function encode(value)
+    {
+        return json_encode(value);
+    }
+
+    public function notify()
+    {
+    }
 }

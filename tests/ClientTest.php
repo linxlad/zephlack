@@ -2,18 +2,34 @@
 
 class ClientTestTest extends PHPUnit_Framework_TestCase {
 
-	public function testInstantiatable()
+	public function testInitWithUriAndToken()
 	{
-		// Array:
-		$firstCollection = new Zephlack\Collection(["foo","bar","baz"]);
-		$this->assertCount(3, $firstCollection);
+		$client = new Zephlack\Client('tracksy', 'CnTcDCW4CGWwCMyKub41aL1s');
+		$this->assertEquals("https://tracksy.slack.com", $client->getUrl());
+		$this->assertEquals('CnTcDCW4CGWwCMyKub41aL1s', $client->getToken());
+	}
 
-		// Collection:
-		$secondCollection = new Zephlack\Collection($firstCollection);
-		$this->assertCount(3, $firstCollection);
+	public function testInitWithEmptyTeam()
+	{
+		try {
+			$client = new Zephlack\Client('', 'abcdefg');
+		} catch (Exception $e) {
+			// Check the exception thrown is an instance clientException
+			$this->assertInstanceOf('Zephlack\clientException', $e);
+			// Check for correct exception message
+			$this->assertEquals($e->getMessage(), 'Team name is required.');
+		}
+	}
 
-		// Not array or Collection:
-		$this->setExpectedException('Exception');
-		$thirdCollection = new Zephlack\Collection("sdfsdf");
+	public function testInitWithEmptyToken()
+	{
+		try {
+			$client = new Zephlack\Client('tracksy', '');
+		} catch (Exception $e) {
+			// Check the exception thrown is an instance clientException
+			$this->assertInstanceOf('Zephlack\clientException', $e);
+			// Check for correct exception message
+			$this->assertEquals($e->getMessage(), 'API token name is required.');
+		}
 	}
 }
