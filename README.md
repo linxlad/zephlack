@@ -22,7 +22,7 @@ _(Zephir installation required for this option. Instructions can be found here [
 
 Add extension to your php configuration:
     
-    extension=phalcon.so
+    extension=zephlack.so
     
 Finally restart your web server.
 
