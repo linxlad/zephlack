@@ -4,3 +4,4 @@ ext
 .temp/
 compile.log
 compile-errors.log
+test.php

@@ -1,30 +1,30 @@
 namespace Zephlack\Message;
 
-class Message implements MessageInterface
+class Message
 {
-    protected text {
+    public text {
         set, get
     };
 
-    protected channel {
+    public channel {
         set, get
     };
 
-    protected username {
+    public username {
         set, get
     };
 
-    protected iconEmoji {
+    public iconEmoji {
         set, get
     };
 
-    protected iconUrl {
+    public iconUrl {
         set, get
     };
 
-    protected linkNames = false;
+    public linkNames = false;
 
-    protected attachments = [] {
+    public attachments = [] {
         set, get
     };
 

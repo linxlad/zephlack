@@ -1,11 +1,11 @@
 <?php
 
-class ClientTestTest extends PHPUnit_Framework_TestCase {
+class ClientTest extends PHPUnit_Framework_TestCase {
 
 	public function testInitWithUriAndToken()
 	{
-		$client = new Zephlack\Client('tracksy', 'CnTcDCW4CGWwCMyKub41aL1s');
-		$this->assertEquals("https://tracksy.slack.com", $client->getUrl());
+		$client = new Zephlack\Client('team', 'abcdefg');
+		$this->assertEquals("https://team.slack.com", $client->getUrl());
 		$this->assertEquals('CnTcDCW4CGWwCMyKub41aL1s', $client->getToken());
 	}
 
@@ -24,7 +24,7 @@ class ClientTestTest extends PHPUnit_Framework_TestCase {
 	public function testInitWithEmptyToken()
 	{
 		try {
-			$client = new Zephlack\Client('tracksy', '');
+			$client = new Zephlack\Client('team', '');
 		} catch (Exception $e) {
 			// Check the exception thrown is an instance clientException
 			$this->assertInstanceOf('Zephlack\clientException', $e);

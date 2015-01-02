@@ -2,11 +2,11 @@ namespace Zephlack\Message;
 
 class MessageField
 {
-    protected title {
+    public title {
         set, get
     };
 
-    protected value {
+    public value {
         set, get
     };
 }

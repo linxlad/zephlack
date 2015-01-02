@@ -2,23 +2,23 @@ namespace Zephlack\Message;
 
 class MessageAttachment
 {
-    protected fallback {
+    public fallback {
         set, get
     };
 
-    protected text {
+    public text {
         set, get
     };
 
-    protected pretext {
+    public pretext {
         set, get
     };
 
-    protected color {
+    public color {
         set, get
     };
 
-    protected fields {
+    public fields {
         set, get
     };
 
