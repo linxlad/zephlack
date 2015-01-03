@@ -1,11 +1,12 @@
 zephlack
 ========
 
-[![Build Status](https://img.shields.io/badge/stable-1.0-blue.svg?style=flat-square)](https://packagist.org/packages/linxlad/zephlack)
-[![Build Status](https://img.shields.io/badge/code%20quality-B-brightgreen.svg?style=flat-square)](https://www.codacy.com/public/justlikephp/zephlack/dashboard)
-[![Build Status](https://img.shields.io/badge/packagist-1.0-blue.svg?style=flat-square)](https://packagist.org/packages/linxlad/zephlack)
-[![Build Status](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://github.com/linxlad/zephlack/blob/master/LICENSE.md)
-[![Build Status](https://img.shields.io/badge/Author-%40linxlad-blue.svg?style=flat-square)](https://twitter.com/L0veByte)
+[![Travis branch](https://img.shields.io/travis/joyent/node/v0.6.svg?style=flat-square)](https://travis-ci.org/linxlad/zephlack)
+[![Stable](https://img.shields.io/badge/stable-1.0-blue.svg?style=flat-square)](https://packagist.org/packages/linxlad/zephlack)
+[![Code Quality](https://img.shields.io/badge/code%20quality-B-brightgreen.svg?style=flat-square)](https://www.codacy.com/public/justlikephp/zephlack/dashboard)
+[![Packagist](https://img.shields.io/badge/packagist-1.0-blue.svg?style=flat-square)](https://packagist.org/packages/linxlad/zephlack)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://github.com/linxlad/zephlack/blob/master/LICENSE.md)
+[![Author](https://img.shields.io/badge/Author-%40linxlad-blue.svg?style=flat-square)](https://twitter.com/L0veByte)
 
 Slack Messaging extension written in Zephir.
 
