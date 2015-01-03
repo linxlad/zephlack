@@ -13,6 +13,7 @@ class ClientTestTest extends PHPUnit_Framework_TestCase {
 	{
 		try {
 			$client = new Zephlack\Client('', 'abcdefg');
+			$client->getToken();
 		} catch (Exception $e) {
 			// Check the exception thrown is an instance clientException
 			$this->assertInstanceOf('Zephlack\clientException', $e);
@@ -25,6 +26,7 @@ class ClientTestTest extends PHPUnit_Framework_TestCase {
 	{
 		try {
 			$client = new Zephlack\Client('tracksy', '');
+			$client->getUrl();
 		} catch (Exception $e) {
 			// Check the exception thrown is an instance clientException
 			$this->assertInstanceOf('Zephlack\clientException', $e);
