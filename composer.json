@@ -1,6 +1,6 @@
 {
     "name": "linxlad/zephlack",
-    "description": "SLack API extension written in Zephir.",
+    "description": "Slack Messenger extension written in Zephir.",
     "authors": [
         {
             "name": "Nathan Daly",
