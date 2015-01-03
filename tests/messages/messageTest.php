@@ -1,5 +1,7 @@
 <?php
 
+namespace Zephlack\Tests\Messages;
+
 class MessageTest extends PHPUnit_Framework_TestCase {
 
 	public function testInitWithText()
