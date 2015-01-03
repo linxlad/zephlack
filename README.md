@@ -1,6 +1,8 @@
 zephlack
 ========
 
+https://img.shields.io/badge/Author-%40linxlad-blue.svg
+
 Slack Messaging extension written in Zephir.
 
 ![Slack output](http://i58.tinypic.com/az6q7o.png)
