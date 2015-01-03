@@ -16,25 +16,6 @@ Slack is a platform for team communication: everything in one place, instantly s
 
 ## Installation
 
-##### zmm
-Installation via zmm is recommended.
-
-1. install zmm
-	```sh
-	wget https://github.com/wapmorgan/zmm/archive/master.zip && unzip master.zip && cd zmm-master
-	sudo make install
-	```
-
-2. install zephir
-	```sh
-	sudo zmm install --zephir
-	```
-
-3. install shell
-	```sh
-	sudo zmm install zephlack
-	```
-
 ##### Pre-built extension
 Grab the latest extension from [here](https://sourceforge.net/projects/zephlack/files/zephlack.so) and place it in the following directory:
 ######Ubuntu
