@@ -33,6 +33,7 @@ Installation via zmm is recommended.
 3. install shell
 	```sh
 	sudo zmm install zephlack
+	```
 
 ##### Pre-built extension
 Grab the latest extension from [here](https://sourceforge.net/projects/zephlack/files/zephlack.so) and place it in the following directory:
