@@ -10,11 +10,13 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
 
 		// Collection:
 		$secondCollection = new Zephlack\Collection($firstCollection);
+		$collection->foo = "bar";
 		$this->assertCount(3, $firstCollection);
 
 		// Not array or Collection:
 		$this->setExpectedException('Exception');
 		$thirdCollection = new Zephlack\Collection("sdfsdf");
+		$collection->bar = "foo";
 	}
 
 	public function testOOProperties()
