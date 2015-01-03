@@ -1,5 +1,7 @@
 <?php
 
+namespace Zephlack\Tests\Http;
+
 class HttpHeaderTest extends PHPUnit_Framework_TestCase {
 
 	protected $statusOK = "HTTP/1.1 200 OK";
