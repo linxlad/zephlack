@@ -2,7 +2,7 @@
 
 namespace Zephlack\Tests\Http;
 
-class HttpRequestTest extends PHPUnit_Framework_TestCase {
+class HttpRequestTest extends \PHPUnit_Framework_TestCase {
 
 	public function testInitWithHeaderAndUri()
 	{
