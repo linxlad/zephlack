@@ -1,0 +1,24 @@
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="true"
+         syntaxCheck="false"
+         bootstrap="./tests/Bootstrap.php"
+        >
+
+    <testsuites>
+        <testsuite name="Zephlack Client Collections Test Suite">
+            <directory>./tests</directory>
+        </testsuite>
+        <testsuite name="Zephlack HTTP Test Suite">
+            <directory>./tests/http</directory>
+        </testsuite>
+        <testsuite name="Zephlack Message Test Suite">
+            <directory>./tests/messages</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
