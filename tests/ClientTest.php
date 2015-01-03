@@ -1,5 +1,7 @@
 <?php
 
+namespace Zephlack\Tests;
+
 class ClientTestTest extends PHPUnit_Framework_TestCase {
 
 	public function testInitWithUriAndToken()
