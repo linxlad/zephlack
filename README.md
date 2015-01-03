@@ -1,7 +1,7 @@
 zephlack
 ========
 
-[![Travis branch](https://img.shields.io/travis/joyent/node/v0.6.svg?style=flat-square)](https://travis-ci.org/linxlad/zephlack)
+[![Travis branch](https://api.travis-ci.org/linxlad/zephlack.svg)](https://travis-ci.org/linxlad/zephlack)
 [![Stable](https://img.shields.io/badge/stable-1.0-blue.svg?style=flat-square)](https://packagist.org/packages/linxlad/zephlack)
 [![Code Quality](https://img.shields.io/badge/code%20quality-B-brightgreen.svg?style=flat-square)](https://www.codacy.com/public/justlikephp/zephlack/dashboard)
 [![Packagist](https://img.shields.io/badge/packagist-1.0-blue.svg?style=flat-square)](https://packagist.org/packages/linxlad/zephlack)
