@@ -1,4 +1,4 @@
-namespace Lynx\Tests;
+namespace Zephlack\Tests;
 
 include_once __DIR__ . '/../../../vendor/autoload.php';
 
