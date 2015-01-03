@@ -67,6 +67,7 @@ class HttpHeaderTest extends PHPUnit_Framework_TestCase {
 	{
 		$this->setExpectedException('Zephlack\Http\HttpException');
 		$header = new Zephlack\Http\Header(123);
+		$header->foo = "bar";
 	}
 
 	/**
