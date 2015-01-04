@@ -1,0 +1,5 @@
+
+extern zend_class_entry *zephlack_message_messageexception_ce;
+
+ZEPHIR_INIT_CLASS(Zephlack_Message_messageException);
+

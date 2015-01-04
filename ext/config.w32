@@ -1,0 +1,12 @@
+ARG_ENABLE("zephlack", "enable zephlack", "no");
+
+if (PHP_ZEPHLACK != "no") {
+  EXTENSION("zephlack", "zephlack.c", null, "-I"+configure_module_dirname);
+  ADD_SOURCES(configure_module_dirname + "/kernel", "main.c memory.c exception.c hash.c debug.c backtrace.c object.c array.c string.c fcall.c require.c file.c operators.c concat.c variables.c filter.c iterator.c exit.c", "zephlack");
+  ADD_SOURCES(configure_module_dirname + "/kernel/extended", "array.c", "zephlack");
+  
+  ADD_SOURCES(configure_module_dirname + "/zephlack/message", "message.zep.c messageattachment.zep.c messageexception.zep.c messagefield.zep.c messageinterface.zep.c", "zephlack");
+	ADD_SOURCES(configure_module_dirname + "/zephlack", "client.zep.c clientexception.zep.c collection.zep.c", "zephlack");
+	ADD_SOURCES(configure_module_dirname + "/zephlack/http", "header.zep.c httpexception.zep.c request.zep.c response.zep.c uri.zep.c", "zephlack");
+  ADD_FLAG("CFLAGS_ZEPHLACK", "/D ZEPHIR_RELEASE");
+}
