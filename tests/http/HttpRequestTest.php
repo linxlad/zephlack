@@ -6,17 +6,17 @@ class HttpRequestTest extends \PHPUnit_Framework_TestCase {
 
 	public function testInitWithHeaderAndUri()
 	{
-		$request = new Zephlack\Http\Request;
+		$request = new \Zephlack\Http\Request;
 		$this->assertInstanceOf('Zephlack\Http\Header', $request->header);
 		$this->assertInstanceOf('Zephlack\Http\Uri', $request->uri);
 	}
 
 	public function testUri()
 	{
-		$request = new Zephlack\Http\Request("http://www.domain.com/");
+		$request = new \Zephlack\Http\Request("http://www.domain.com/");
 		$this->assertEquals("http://www.domain.com/", $request->getUri());
 
-		$uri = new Zephlack\Http\Uri("https://www.test.co.il/foo");
+		$uri = new \Zephlack\Http\Uri("https://www.test.co.il/foo");
 		$request->setUri($uri);
 		$this->assertSame($uri, $request->uri);
 
@@ -26,7 +26,7 @@ class HttpRequestTest extends \PHPUnit_Framework_TestCase {
 
 	public function testOptions()
 	{
-		$request = new Zephlack\Http\Request;
+		$request = new \Zephlack\Http\Request;
 		$this->assertFalse($request->hasOption(CURLOPT_FORBID_REUSE));
 		$request->setOption(CURLOPT_FORBID_REUSE, true);
 		$this->assertTrue($request->hasOption(CURLOPT_FORBID_REUSE));
@@ -35,7 +35,7 @@ class HttpRequestTest extends \PHPUnit_Framework_TestCase {
 
 	public function testParams()
 	{
-		$request = new Zephlack\Http\Request;
+		$request = new \Zephlack\Http\Request;
 		$this->assertFalse(isset($request->foo));
 		$request->foo = "bar";
 		$this->assertTrue(isset($request->foo));
@@ -54,7 +54,7 @@ class HttpRequestTest extends \PHPUnit_Framework_TestCase {
 
 	public function testHeaders()
 	{
-		$request = new Zephlack\Http\Request;
+		$request = new \Zephlack\Http\Request;
 		$this->assertFalse($request->hasHeader("foo"));
 		$request->setHeader("foo", "bar");
 		$this->assertTrue($request->hasHeader("foo"));

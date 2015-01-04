@@ -2,11 +2,11 @@
 
 namespace Zephlack\Tests;
 
-class ClientTestTest extends \PHPUnit_Framework_TestCase {
+class ClientTest extends \PHPUnit_Framework_TestCase {
 
 	public function testInitWithUriAndToken()
 	{
-		$client = new Zephlack\Client('team', 'abcdefg');
+		$client = new \Zephlack\Client('team', 'abcdefg');
 		$this->assertEquals("https://team.slack.com", $client->getUrl());
 		$this->assertEquals('abcdefg', $client->getToken());
 	}
@@ -14,9 +14,9 @@ class ClientTestTest extends \PHPUnit_Framework_TestCase {
 	public function testInitWithEmptyTeam()
 	{
 		try {
-			$client = new Zephlack\Client('', 'abcdefg');
+			$client = new \Zephlack\Client('', 'abcdefg');
 			$client->getToken();
-		} catch (Exception $e) {
+		} catch (\Exception $e) {
 			// Check the exception thrown is an instance clientException
 			$this->assertInstanceOf('Zephlack\clientException', $e);
 			// Check for correct exception message
@@ -27,9 +27,9 @@ class ClientTestTest extends \PHPUnit_Framework_TestCase {
 	public function testInitWithEmptyToken()
 	{
 		try {
-			$client = new Zephlack\Client('tracksy', '');
+			$client = new \Zephlack\Client('tracksy', '');
 			$client->getUrl();
-		} catch (Exception $e) {
+		} catch (\Exception $e) {
 			// Check the exception thrown is an instance clientException
 			$this->assertInstanceOf('Zephlack\clientException', $e);
 			// Check for correct exception message
