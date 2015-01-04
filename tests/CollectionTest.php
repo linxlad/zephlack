@@ -55,9 +55,9 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
 	public function testIteratable()
 	{
 		$collection = new \Zephlack\Collection(["foo","bar","baz"=>"acme"]);
-		$i = 0;
+		$iterator = 0;
 		foreach ($collection as $key => $value) {
-			switch ($i) {
+			switch ($iterator) {
 				case 0:
 					$this->assertEquals("foo", $value);
 					break;
@@ -69,7 +69,7 @@ class CollectionTest extends \PHPUnit_Framework_TestCase {
 					$this->assertEquals("acme", $value);
 					break;
 			}
-			$i++;
+			$iterator++;
 		}
 	}
 
