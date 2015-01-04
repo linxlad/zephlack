@@ -3,7 +3,7 @@ zephlack
 
 [![Travis branch](https://api.travis-ci.org/linxlad/zephlack.svg)](https://travis-ci.org/linxlad/zephlack)
 [![Stable](https://img.shields.io/badge/stable-1.0-blue.svg?style=flat-square)](https://packagist.org/packages/linxlad/zephlack)
-[![Code Quality](https://img.shields.io/badge/code%20quality-A-brightgreen.svg?style=flat-square)](https://www.codacy.com/public/justlikephp/phalcon-skeleton/dashboard)
+[![Code Quality](https://img.shields.io/badge/code%20quality-A-brightgreen.svg?style=flat-square)](https://www.codacy.com/public/justlikephp/zephlack/dashboard)
 [![Packagist](https://img.shields.io/badge/packagist-1.0-blue.svg?style=flat-square)](https://packagist.org/packages/linxlad/zephlack)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://github.com/linxlad/zephlack/blob/master/LICENSE.md)
 
