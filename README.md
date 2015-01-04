@@ -31,7 +31,7 @@ Add extension to your php configuration:
 
 _(Zephir installation required for this option. Instructions can be found [here](http://zephir-lang.com/install.html#installing-zephir))_
 
-    git clone --depth=1 --branch=master git://github.com/linxlad/zephlack.git
+    git clone --depth=1 --branch=master https://github.com/linxlad/zephlack.git
     cd zephlack
     zephir build
 
